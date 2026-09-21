@@ -1,0 +1,79 @@
+{
+  "name": "@groundtruth/plugin-groundtruth",
+  "version": "0.1.0",
+  "description": "ElizaOS plugin for GROUNDTRUTH: memecoin coin records, creator track records and venue figures (Solana, Robinhood Chain), from the live API.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "packageType": "plugin",
+  "platform": "node",
+  "keywords": [
+    "elizaos",
+    "elizaos-plugin",
+    "plugin",
+    "groundtruth",
+    "solana",
+    "robinhood-chain",
+    "memecoin",
+    "rug",
+    "x402"
+  ],
+  "homepage": "https://groundtruths.xyz/integrations",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groundtruth-now/plugin-groundtruth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/groundtruth-now/plugin-groundtruth/issues"
+  },
+  "license": "MIT",
+  "author": "GROUNDTRUTH",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "peerDependencies": {
+    "@elizaos/core": ">=1.7.0"
+  },
+  "devDependencies": {
+    "@elizaos/core": "1.7.2",
+    "@types/node": "^22.20.4",
+    "typescript": "^5.6.0",
+    "vitest": "^3.2.0"
+  },
+  "agentConfig": {
+    "pluginType": "elizaos:plugin:1.0.0",
+    "pluginParameters": {
+      "GROUNDTRUTH_API_KEY": {
+        "type": "string",
+        "description": "Optional. GROUNDTRUTH Builder/Scale API key, sent as x-api-key. Without it the plugin uses the free trial (5 calls per IP per day) or an x402-paying fetch.",
+        "required": false,
+        "sensitive": true
+      },
+      "GROUNDTRUTH_API_URL": {
+        "type": "string",
+        "description": "Optional. API base URL.",
+        "defaultValue": "https://api.groundtruths.xyz",
+        "required": false
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
