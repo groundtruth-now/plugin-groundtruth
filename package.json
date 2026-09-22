@@ -1,5 +1,5 @@
 {
-  "name": "@groundtruth/plugin-groundtruth",
+  "name": "@groundtruth-now/plugin-groundtruth",
   "version": "0.1.0",
   "description": "ElizaOS plugin for GROUNDTRUTH: memecoin coin records, creator track records and venue figures (Solana, Robinhood Chain), from the live API.",
   "type": "module",

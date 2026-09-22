@@ -1,4 +1,4 @@
-# @groundtruth/plugin-groundtruth
+# @groundtruth-now/plugin-groundtruth
 
 ElizaOS plugin for [GROUNDTRUTH](https://groundtruths.xyz): receipts on memecoin launches. Your agent can say what
 happened to a coin, what its creator's other launches did, and how a launch venue's coins turn out. Covers Solana
@@ -10,11 +10,11 @@ happened to a coin, what its creator's other launches did, and how a launch venu
 ## Install
 
 ```bash
-npm install @groundtruth/plugin-groundtruth
+npm install @groundtruth-now/plugin-groundtruth
 ```
 
 ```ts
-import { groundtruthPlugin } from "@groundtruth/plugin-groundtruth";
+import { groundtruthPlugin } from "@groundtruth-now/plugin-groundtruth";
 
 export const character = {
   name: "Degen",
@@ -69,7 +69,7 @@ ways:
    needed. Pass a paying fetch to `createGroundtruthPlugin`:
 
 ```ts
-import { createGroundtruthPlugin } from "@groundtruth/plugin-groundtruth";
+import { createGroundtruthPlugin } from "@groundtruth-now/plugin-groundtruth";
 import { wrapFetchWithPaymentFromConfig } from "@x402/fetch";
 import { ExactEvmScheme } from "@x402/evm";
 import { privateKeyToAccount } from "viem/accounts";
