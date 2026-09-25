@@ -10,11 +10,11 @@ happened to a coin, what its creator's other launches did, and how a launch venu
 ## Install
 
 ```bash
-npm install github:groundtruth-now/plugin-groundtruth
+npm install @groundtruth-now/plugin-groundtruth
 ```
 
-> The npm package `@groundtruth-now/plugin-groundtruth` is not on the registry yet. Until it is, install from
-> GitHub as above; the package name and import path are the same, and the plugin builds itself on install.
+The latest `main` also installs straight from GitHub (`npm install github:groundtruth-now/plugin-groundtruth`); it
+builds itself on install and the import path is the same.
 
 ```ts
 import { groundtruthPlugin } from "@groundtruth-now/plugin-groundtruth";
